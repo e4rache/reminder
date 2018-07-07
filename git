@@ -1,9 +1,10 @@
 [LearnCode.academy] https://www.youtube.com/watch?v=0fKg7e37bQE
 
+create a github project on github.com then
 git clone [url]
 git status
 git add *
-git config user.email "e4rache@protonmail.com"
-git config user.name "e4rache"
+git config user.email "your@email.address"
+git config user.name "yourUserName"
 git commit -m "inital commit"
 git push
