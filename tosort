@@ -1,0 +1,16 @@
+# orphan
+pacman -Rs $(pacman -Qqtd)
+
+# pastbin
+command 2>&1 | nc termbin.com 9999
+
+command | curl -F c=@- https://ptpb.pw/
+
+# bridge + nat
+ ip link add br0 type bridge;
+ ip link set br0 up;
+ ip addr add 192.168.57.1/24 dev br0;
+ iptables -t nat -A POSTROUTING -s 192.168.57.1/24 -j MASQUERADE
+
+# crypt root
+options cryptdevice=UUID=7071f037-f159-4fbc-8cf9-45feb575323e:cryptroot root=/dev/mapper/cryptroot rw

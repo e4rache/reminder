@@ -1,0 +1,9 @@
+[LearnCode.academy] https://www.youtube.com/watch?v=0fKg7e37bQE
+
+git clone [url]
+git status
+git add *
+git config user.email "e4rache@protonmail.com"
+git config user.name "e4rache"
+git commit -m "inital commit"
+git push
