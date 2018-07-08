@@ -1,0 +1,18 @@
+mount /mnt
+mount /mnt/boot
+
+/etc/pacman.d/mirrorlist
+
+pacstrap /mnt base
+genfstab -U /mnt >> /mnt/etc/fstab
+arch-root /mnt
+ln -sf /usr/share/zoneinfo/Region/City /etc/localtime
+hwclock --systohc
+vim /etc/locale.gen
+locale-gen
+vim /etc/locale.conf -> LANG=en_US.UTF-8
+vim /etc/hostname
+vim /etc/hosts
+passwd
+install grub
+dhcpcd
