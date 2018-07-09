@@ -1,0 +1,20 @@
+ref : https://www.digitalocean.com/community/tutorials/how-to-use-systemctl-to-manage-systemd-services-and-units
+
+systemctl start
+systemctl stop
+systemctl restart
+systemctl reload
+systemctl enable
+systemctl disable
+systemctl status
+systemctl is-active
+systemctl is-enabled
+
+systemctl list-units
+systemctl list-units --all
+systemctl list-units --all --state=inactive
+systemctl list-units --type=service
+
+systemctl list-unit-files
+
+systemctl list-dependencies mongodb
