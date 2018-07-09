@@ -2,4 +2,6 @@
 
 pacman -Ql [package]     // list all files within a package
 pacman -Rns $(pacman -Qtdq)     // Remove unused packages (orphans)
+or pacman -Rs $(pacman -Qqtd)
+
 

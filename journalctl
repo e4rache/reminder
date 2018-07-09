@@ -1,0 +1,21 @@
+// current boot logs 
+journalctl -b
+
+journalctl --list-boots
+
+journalctl -b -1
+journalctl -b caf0524a1d394ce0bdbcff75b94444fe
+
+journalctl --since "2015-01-10" --until "2015-01-11 03:00"
+
+journalctl -u nginx
+
+// kernel messages
+journalctl -k -b 0
+
+journalctl -b -u nginx -o json-pretty
+
+journalctl -f
+
+journalctl --disk-usage
+journalctl --vacuum-size=200M
