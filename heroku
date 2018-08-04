@@ -13,5 +13,6 @@ sudo snap install heroku --classic
 
 heroku login
 heroku create
-git push heroku master
 
+git push heroku master
+heroku logs --tail
