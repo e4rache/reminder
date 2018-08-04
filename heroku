@@ -1,0 +1,17 @@
+* install snapd
+
+git clone https://aur.archlinux.org/snapd.git
+check PKGBUILD code
+makepkg -si
+
+* install heroku cli
+
+sudo snap install heroku --classic
+
+
+* publish app
+
+heroku login
+heroku create
+git push heroku master
+
