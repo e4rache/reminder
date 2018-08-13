@@ -13,6 +13,10 @@ sudo snap install heroku --classic
 
 heroku login
 heroku create
+heroku create app_name ?
 
 git push heroku master
 heroku logs --tail
+
+* env.CONFIG ?
+heroku config:set MONGOLAB_URI=db_connection_uri

@@ -38,7 +38,10 @@ db.customers.update({first_name:"John"} , {$unset:{age:true}})
 
 db.customers.update({first_name:"Mary"} , {first_name:"Mary", last_name:"Samson"}, {upsert:true})
 
+
 db.customers.update({first_name:"John", {$rename:{"gender":"sex"}})
+
+db.radios.update({},{$rename:{"type":"model"}},{multi:true})
 
 db.customers.remove({first_name:"John"}, {justOne:true} )
 

@@ -1,8 +1,0 @@
-Jun 16 20:23:53 m kernel: NVRM: The NVIDIA GeForce GTX 560 Ti GPU installed in this system is
-                          NVRM:  supported through the NVIDIA 390.xx Legacy drivers. Please
-                          NVRM:  visit http://www.nvidia.com/object/unix.html for more
-                          NVRM:  information.  The 396.24 NVIDIA driver will ignore
-                          NVRM:  this GPU.  Continuing probe...
-Jun 16 20:23:53 m kernel: NVRM: No NVIDIA graphics adapter found!
-
-
