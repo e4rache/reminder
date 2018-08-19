@@ -1,0 +1,4 @@
+scan network for live ip's
+nmap -sP 192.168.1.0/24
+nmap -sn 192.168.1.0/24 # same with new flags
+

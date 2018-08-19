@@ -1,0 +1,6 @@
+2018.08.19
+        inet6 fd73:bcb:171b:0:6d65:4b00:1e3e:b24a  prefixlen 64  scopeid 0x0<global>
+        inet6 2a02:a03f:52fc:a000:8627:8adb:d2d0:30cd  prefixlen 64  scopeid 0x0<global>
+        inet6 fe80::ef31:2bb8:7efa:4b37  prefixlen 64  scopeid 0x20<link>
+        inet6 fd73:bcb:171b::3bf  prefixlen 128  scopeid 0x0<global>
+
