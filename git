@@ -1,10 +1,45 @@
 [LearnCode.academy] https://www.youtube.com/watch?v=0fKg7e37bQE
 
-create a github project on github.com then
+Github - new project : 
+----------------------
+create a new repository on github with a README.md file. then,
 git clone [url]
 git status
-git add *
+git add .
 git config user.email "your@email.address"
 git config user.name "yourUserName"
 git commit -m "inital commit"
 git push
+
+Github - existing local git repository :
+----------------------------------------
+git init
+
+git remote add origin https://github.com/e4rache/my-repository-name.git
+or 
+git remote add origin git@github.com:e4rache/my-repository-name.git
+
+git push -u origin master
+git remote -v
+
+
+branching :
+-----------
+git branch newbranch
+git checkout newbranch
+git push --set-upstream origin branch-testing
+...
+... usual workflow
+...
+
+git checkout master
+git merge newbranch
+git mergetool
+
+setting vscode as a git mergetool :
+-----------------------------------
+
+git config --global merge.tool vscode
+git config --global mergetool.vscode.cmd '~/dev/vscode/code --wait $MERGED'
+git config --global diff.tool vscode
+git config --global difftool.vscode.cmd '~/dev/vscode/code --wait --diff $LOCAL $REMOTE'

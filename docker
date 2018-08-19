@@ -1,0 +1,74 @@
+https://gist.github.com/bradtraversy/89fad226dc058a41b596d586022a9bd3
+https://www.youtube.com/watch?v=Kyx2PsuwomE
+https://www.youtube.com/watch?v=hP77Rua1E0c
+
+docker container run -it -p 80:80 nginx
+docker container ls -a
+docker pull nginx
+docker images
+docker container run -d -p 8080:80 --name mynginx nginx
+docker container ls
+docker ps
+docker container run -d -p 8081:80 --name myapache httpd
+docker container run -d -p 3306:3306 --name mysql --env MYSQL_ROOT_PASSWORD=1234 mysql
+docker container stop mysql
+docker container remove myapache -f
+docker container exec -it mynginx bash
+docker container run -d -p 8080:80 -v $(pwd):/usr/share/nginx/html --name nginx-website nginx
+
+
+Dockerfile :
+-------------
+FROM nginx:latest
+WORKDIR /usr/share/nginx/html
+COPY . .
+
+docker login
+docker image build -t username/nginx-website . 
+docker images
+docker container run -d 8082:80 username/nginx-website
+docker ps
+docker push username/nginx-website
+
+a nodejs Dockerfile :
+----------------------
+FROM node:10
+WORKDIR /usr/src/app
+COPY package*.json ./
+RUN npm install
+COPY . .
+EXPOSE 3000
+CMD ["npm","start"]
+
+docker-compose.yml :
+--------------------
+version: '3'
+services:
+    app:
+        contianer_name: docker-node-mongo
+        restart: always
+        build: .
+        ports:
+            - '80:3000'
+        links:
+            - mongo
+    mongo:
+        container_name: mongo
+        image: mongo
+        ports:
+            - '27017:27017'
+
+.dockerignore :
+---------------
+node_modules
+npm-debug.log
+
+docker-compose up
+docker-compose down
+
+-> Digital Ocean
+-----------------
+git add .
+
+
+

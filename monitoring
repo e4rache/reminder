@@ -1,0 +1,8 @@
+glances
+ping -i 5 9.9.9.9
+watch netstat -tuwnape
+conky-manager
+iptraf
+journalctl -f
+http://cacti.localhost
+heroku logs -a radio-jam -t
