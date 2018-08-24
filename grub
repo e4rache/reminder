@@ -1,0 +1,7 @@
+boot within grub shell :
+------------------------
+set root=(hd0,1)
+linux /boot/linux root=/dev/sda1
+initrd /boot/ram
+boot
+
